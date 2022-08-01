@@ -35,7 +35,7 @@
 
 代码见 backpack_basic.py
 
-### 法二：dp数组为一维数组 【还没看】
+### 法二：dp数组为一维数组 【还没看!!】
 传送门：<https://github.com/youngyangyang04/leetcode-master/blob/master/problems/%E8%83%8C%E5%8C%85%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%8001%E8%83%8C%E5%8C%85-2.md>
 其实容易看出来，上述两维的数组，在递推公式中，j在左右两边一直保持不变的，所以没必要用二维。可以用滚动数组。  
 1. 确定dp数组（dp table）以及下标的含义  

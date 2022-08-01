@@ -18,11 +18,12 @@ def backpack_01(weights, values, bag_size):
             dp[0][i] = values[0]
         else:
             dp[0][i] = 0
+    # recursion
     for i in range(1, len(weights)): # i表示每个物品
         for j in range(1, bag_size + 1): # j表示各个背包的最大限重
-            if weights[i] > j:
+            if weights[i] > j: # 当前限重装不下当前物品
                 dp[i][j] = dp[i - 1][j]
-            else:
+            else: # 当前限重能装下当前物品
                 tmp_value = dp[i - 1][j - weights[i]] + values[i]
                 dp[i][j] = max(dp[i - 1][j], tmp_value)
     return dp[-1][-1]

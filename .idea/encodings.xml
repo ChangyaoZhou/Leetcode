@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-16">
-    <file url="file://$PROJECT_DIR$/backpack_basic.py" charset="UTF-8" />
-    <file url="PROJECT" charset="GBK" />
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/二叉树/102.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/二叉树/144.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/二叉树/145.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/二叉树/94.py" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

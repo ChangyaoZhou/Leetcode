@@ -15,10 +15,9 @@ class Node(object):
 
 # define a binary tree
 node7 = Node(7)
-node6 = Node(6)
 node5 = Node(5)
 node4 = Node(4)
-node3 = Node(3, node6, node7)
+node3 = Node(3, None, node7)
 node2 = Node(2, node4, node5)
 node1 = Node(1, node2, node3)
 
@@ -27,10 +26,7 @@ def connect(root):
     """
     :type root: Node
     :rtype: Node
-    根据二叉树结构，为二叉树的各个节点定义next指针
-    【初始状态下】所有 next 指针都被设置为 None
-    每个节点的next指针指向他的下一个右侧节点，如果找不到下一个右侧节点，则将 next 指针设置为 None
-    本题中的二叉树都是完美二叉树，其所有叶子节点都在同一层，每个父节点都有两个子节点
+    本题中的二叉树不一定是完美二叉树
     """
     if root == None:
         return None
@@ -48,11 +44,12 @@ def connect(root):
                 que.append(cur.left)
             if cur.right:
                 que.append(cur.right)
-            if i == size - 1:
-                break
+            if i < size - 1:
+                cur.next = que[0]
             # i=size-1时，que中所有当前层的节点已经全部被删除了，直接break，最右侧的节点的next指针是None(初始化就是None，不用改)
-            cur.next = que[0]
+
     return root
+
 
 
 # test function
@@ -82,5 +79,3 @@ def test(root):
 # test connect function
 root_node = connect(node1)
 print(test(root_node))
-
-

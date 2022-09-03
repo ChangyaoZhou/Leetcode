@@ -22,10 +22,11 @@ def lengthOfLIS(nums):
         for j in range(i):
             if nums[i] > nums[j]:
                 seq_len.append(dp[j] + 1)
-            elif j == i -1:
+            elif j == i - 1:
                 seq_len.append(1)
         dp.append(max(seq_len))
     return max(dp)
+
 
 nums = [10,9,2,5,3,7,101,18]
 nums = [0]

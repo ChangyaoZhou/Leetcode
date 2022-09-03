@@ -37,5 +37,6 @@ def numTrees(n):
         dp.append(num_tree)
     return dp[-1]
 
+
 n = 5
 print(numTrees(n))

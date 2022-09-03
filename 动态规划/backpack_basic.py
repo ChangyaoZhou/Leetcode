@@ -29,9 +29,9 @@ def backpack_01(weights, values, bag_size):
     return dp[-1][-1]
 
 
-weights = [1, 3, 4]
-values = [15, 20, 30]
-bag_size = 4
+weights = [8, 11, 14, 5, 9, 5]
+values = [20, 15, 40, 10, 25, 30]
+bag_size = 30
 print(backpack_01(weights, values, bag_size))
 
 

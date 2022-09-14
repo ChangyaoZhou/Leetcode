@@ -48,5 +48,6 @@ def longestPalindrome(s):
     return longest_str
 
 s = "aacabdkacaa"
+s = "abcdzjudcba"
 print(longestPalindrome(s))
 

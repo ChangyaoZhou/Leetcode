@@ -5,6 +5,7 @@
 
 性质：1、时间复杂度：O(n2) 2、空间复杂度：O(1) 3、稳定排序 4、原地排序
 """
+
 def insert_sort(nums):
     for i in range(1, len(nums)):  # 取出第i个元素，把它的值先放入tmp中
         tmp = nums[i]

@@ -22,6 +22,7 @@ def minPathSum(grid):
                 dp[i][j] = grid[i][j] + min(dp[i][j - 1], dp[i - 1][j])
     return dp[-1][-1]
 
+
 grid = [[1,3,1],
         [1,5,1],
         [4,2,1]]

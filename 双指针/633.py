@@ -19,3 +19,4 @@ def judgeSquareSum(c):
 
 c = 5
 print(judgeSquareSum(c))
+

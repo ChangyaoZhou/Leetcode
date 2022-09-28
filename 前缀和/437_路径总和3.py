@@ -36,6 +36,7 @@ def pathSum(root, targetSum):
         # 如果我们不做状态恢复，当遍历右子树时，左子树中A的信息仍会保留在map中，那此时节点6就会认为A, B都是可追溯到的节点，从而产生错误。
         # e.g. 1 -> 2 -> 3
         #        -> 2 -> 3   如果不做状态恢复，target为6的路径会有4条，实际上只有2条，路径必须是在二叉树中联通的节点组成的！！
+        # 结束上面的backtracking后，curr_sum实参的值不会被改变，会回到上一层节点处的curr_sum
         dict_sum[curr_sum] -= 1
 
         return count

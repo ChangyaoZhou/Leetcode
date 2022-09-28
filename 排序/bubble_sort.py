@@ -15,6 +15,7 @@ def bubble_sort(nums):
                 nums[j] = nums[j+1]
                 nums[j+1] = tmp
     print(nums)
+     
 
 
 def bubble_sort_better(nums):

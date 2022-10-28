@@ -18,16 +18,14 @@ def lengthOfLIS(nums):
     dp = []
     dp.append(1)
     for i in range(1, len(nums)):
-        seq_len = []
+        max_len = 1
         for j in range(i):
             if nums[i] > nums[j]:
-                seq_len.append(dp[j] + 1)
-            elif j == i - 1:
-                seq_len.append(1)
-        dp.append(max(seq_len))
+                max_len = max(max_len, dp[j] + 1)
+        dp.append(max_len)
     return max(dp)
 
 
 nums = [10,9,2,5,3,7,101,18]
-nums = [0]
+# nums = [0]
 print(lengthOfLIS(nums))

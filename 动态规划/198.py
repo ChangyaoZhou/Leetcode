@@ -17,6 +17,7 @@ def rob(nums):
         for i in range(2, len(nums)):
             max_rob = max(dp[i - 2] + nums[i], dp[i - 1])
             dp.append(max_rob)
+    print(dp)
     return dp[-1]
 
 nums = [2, 7, 9, 3, 1]

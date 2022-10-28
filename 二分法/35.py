@@ -16,7 +16,7 @@ def searchInsert(nums, target):
     【2】 target < nums[i], 则 r=mid-1=i-1, l=i, (l>r,会跳出循环)
         但已知 target > nums[i - 1], 所以target会插在nums[i-1], nums[i]中间，插入后的索引为r+1=i
     综上，如果target不在nums中，他插入nums后的索引一定是right+1!!!!
-
+    """
     left = 0
     right = len(nums) - 1
     while left <= right:
@@ -28,16 +28,16 @@ def searchInsert(nums, target):
         else:
             return mid
     return right + 1
-
-    法二：暴力解法
     """
+    法二：暴力解法
+    
     for i in range(len(nums)):
         # 如果target比其中第i个数小，则要插在第i个数前面，插入后的索引为i
         if target <= nums[i]:
             return i
     # 如果target是最大的，或者 nums为空，则返回nums的长度
     return len(nums)
-
+    """
 
 nums = [1, 3, 5, 6]
 target = 2

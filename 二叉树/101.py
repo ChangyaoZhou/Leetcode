@@ -15,13 +15,13 @@ node1 = TreeNode(1, node2, node3)
 
 
 def isSymmetric(root):
-    '''
-    检查二叉树是否轴对称
-    【法一：迭代法】
-    遍历的方式类似层序遍历，遍历从第二层开始，即root.left, root.right
-    按外侧节点(左节点的left，右节点的right)， 内侧节点(左节点的right，右节点的left)的顺序依次进入队列
-    每次从队列中取出两个节点(这两个节点应该是对称对应的两个节点)进行比较，
-    如果所有左右对应的节点都相同，则true
+
+    # 检查二叉树是否轴对称
+    #【法一：迭代法】
+    # 遍历的方式类似层序遍历，遍历从第二层开始，即root.left, root.right
+    # 按外侧节点(左节点的left，右节点的right)， 内侧节点(左节点的right，右节点的left)的顺序依次进入队列
+    # 每次从队列中取出两个节点(这两个节点应该是对称对应的两个节点)进行比较，
+    # 如果所有左右对应的节点都相同，则true
 
     if root == None:
         return True
@@ -35,16 +35,13 @@ def isSymmetric(root):
 
         if not left_node or not right_node or left_node.val != right_node.val:
             return False
-        if left_node:
-            que.append(left_node.left)
-        if right_node:
-            que.append(right_node.right)
-        if left_node:
-            que.append(left_node.right)
-        if right_node:
-            que.append(right_node.left)
+        que.append(left_node.left)
+        que.append(right_node.right)
+        que.append(left_node.right)
+        que.append(right_node.left)
     return True
-    法二：递归
+
+    # 法二：递归
     '''
     if root == None:
         return True
@@ -64,8 +61,7 @@ def isSymmetric(root):
         return outside and inside
 
     return compare(root.left, root.right)
-
-
+    '''
 
 
 print(isSymmetric(node1))

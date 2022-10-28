@@ -25,6 +25,7 @@ def largestDivisibleSubset(nums):
                     max_size = dp[j]+1
                     dp_divisible_set[-1] = dp_divisible_set[j] + [nums[i]]
         dp[i] = max_size
+    print(dp_divisible_set)
     idx = dp.index(max(dp))
     return dp_divisible_set[idx]
 
